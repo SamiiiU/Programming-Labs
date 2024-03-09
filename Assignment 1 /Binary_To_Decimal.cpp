@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 /* Problem : You need to convert a binary number to a decimal number by multiplying the digits of the binary
 number by the corresponding power of 2.
 For example, 1001 can be converted to a decimal number as
@@ -9,8 +8,7 @@ int main(){
 
     //Declaration
     int num, remainder;
-    int binary;
-    int value = 0;
+    int binary , value = 0 , power = 1 ;
 
     //Input
     std::cout << "Enter binary numbers to convert it into decimal : ";
@@ -21,7 +19,8 @@ int main(){
         // calculation
         remainder = num % 10;
         num = num / 10;
-        value = value + remainder * pow(2, i);
+        value = value + remainder*power ;
+        power = power*2;
     }
 
     // Output
