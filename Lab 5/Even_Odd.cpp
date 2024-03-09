@@ -1,4 +1,6 @@
 #include<iostream>
+/*Write a program that accepts an integer parameter n and that returns the integer formed
+by removing the odd / Even digits from n.*/
 
 int main(){
     int num , function , even = 0, odd = 0 , rem , count = 1 ;
