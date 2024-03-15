@@ -10,22 +10,22 @@ int main(){
     std::cout<<"Enter Numbers To Fill Out The Array"<<std::endl;
     //input of array
     for(int i = 0 ; i < n; i++ ){
+        std::cout << i+1 << ": ";
         std::cin>>arr[i];
     }
     
     //checking array
-    for(int  i= 0 ; i < n - 1 ; i++){
-        for(int j = 1+i ; j < n ; j++){
-            if(arr[i] > arr[j]){
-                arr[i] = arr[i] + arr[j];
-                arr[j] = arr[i] - arr[j];
-                arr[i] = arr[i] - arr[j];
-            }
+    for(int  i= 0 ; i < n - i - 1 ; i++){
+        arr[i] = arr[i] + arr[n-i-1];
+        arr[n-i-1] = arr[i] - arr[n-i-1];
+        arr[i] = arr[i] - arr[n-i-1];
         }
-    }
+
     //printing array in ascending order
+    std::cout << "The Reversed array is : ";
     for(int i = 0 ; i < n ; i++){
         std::cout << arr[i] << "\t";
     }
     return 0;
+
 }
